@@ -1,4 +1,8 @@
-# initialize
+# about this app
+
+this app is for the study to Flask, Flask-SqlAlchemy, Flash-Migrate, and HTMX
+
+## initialize
 
 ```sh
 pip shell
@@ -7,19 +11,19 @@ source ./env.sh
 python3 ./init.py
 ```
 
-# how to start
+## how to start
 
 ```sh
 flask run --debug
 ```
 
-# how to create a migration
+## how to create a migration
 
 ```sh
 flask db init
 ```
 
-# how to migrate (upgrade)
+## how to migrate (upgrade)
 
 ```sh
 flask db migrate -m "my migration1"
