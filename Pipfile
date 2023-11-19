@@ -5,6 +5,7 @@ name = "server"
 
 [packages]
 flask-sqlalchemy = "*"
+flask-migrate = "*"
 
 [dev-packages]
 
