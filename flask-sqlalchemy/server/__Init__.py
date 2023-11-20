@@ -1,4 +1,5 @@
-from flask import render_template, request, redirect, url_for
+from typing import List
+from flask import render_template, request, redirect, url_for, make_response
 from .models.user import User
 from .models.email import Email
 from .config import app, db, create_app
@@ -21,6 +22,13 @@ def user_list():
     users = db.session.execute(
         db.select(User).order_by(User.username)).scalars()
     return render_template("user/list.html", users=users)
+
+
+@app.route("/data/users")
+def data_users():
+    users: List[User] = db.session.execute(
+        db.select(User).order_by(User.username)).scalars()
+    return make_response([user.to_dict() for user in users], 200)
 
 
 @app.route("/users/create", methods=["GET", "POST"])
