@@ -14,7 +14,7 @@ python3 ./init.py
 ## how to start
 
 ```sh
-flask run --debug
+flask run --debugger
 ```
 
 ## how to create a migration

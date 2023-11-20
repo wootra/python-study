@@ -11,7 +11,7 @@ class Base(DeclarativeBase):
 db = SQLAlchemy(model_class=Base)
 # create the app
 app = Flask(__name__, template_folder='templates')
-migrate = Migrate(app, db)
+migrate = Migrate(app, db, render_as_batch=True)
 
 # configure the SQLite database, relative to the app instance folder
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
