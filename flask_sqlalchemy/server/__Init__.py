@@ -4,8 +4,6 @@ from .models.user import User
 from .models.email import Email
 from .config import app, db, create_app
 
-create_app()
-
 
 @app.route("/", methods=["GET"])
 def init():
@@ -126,3 +124,8 @@ def user_delete(id):
         return redirect(url_for("user_list"))
 
     return render_template("user/delete.html", user=user)
+
+
+if __name__ == "__main__":
+    create_app()
+    app.run(debug=True)

@@ -28,3 +28,5 @@ flask db init
 ```sh
 flask db migrate -m "my migration1"
 ```
+
+## data structures
