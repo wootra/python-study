@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<ul>
+    {% for user in users %}
+    <li>
+        <div>
+            <h2>{{ user.username }}</h2>
+            <ul>
+                {% for email in user.emails %}
+                <li>{{ email.email }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

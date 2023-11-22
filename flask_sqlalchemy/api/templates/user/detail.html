@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<title>test</title>
+<h1>{{user.name}}</h1>
+<h2>emails</h2>
+<ul>
+    {% for email in user.emails %}
+    <li>{{email.email}}</li>
+    {% endfor %}
+</ul>
