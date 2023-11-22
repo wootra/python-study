@@ -17,8 +17,8 @@ migrate = Migrate(app, db, render_as_batch=True)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
 # initialize the app with the extension
 
-# db.init_app(app)
-# migrate.init_app(app, db)
+db.init_app(app)
+migrate.init_app(app, db)
 
 
 def create_app():

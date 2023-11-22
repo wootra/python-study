@@ -15,7 +15,7 @@ from api.config import app, db, create_app
 def init():
     with app.app_context():
         print("creating database...")
-        db.create_all()
+        # db.create_all()
         users = db.session.execute(
             db.select(User).order_by(User.username)).scalars()
         return render_template("user/index.html", users=users)
